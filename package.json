@@ -1,0 +1,51 @@
+{
+  "name": "@undesigned/esbuild-plugin-glslify",
+  "version": "1.0.0",
+  "description": "A plugin for ESBuild to inline and process shader files for WebGL with glslify",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild --minify --format=cjs --platform=node index.ts > index.js && tsc",
+    "publish": "yarn build && yarn npm publish"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/undesigned-studio/esbuild-plugin-glsl.git"
+  },
+  "keywords": [
+    "esbuild",
+    "plugin",
+    "glsl",
+    "frag",
+    "vert",
+    "wgsl",
+    "shader",
+    "import",
+    "compress",
+    "minify"
+  ],
+  "author": "UNDESIGNED Studio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/undesigned-studio/esbuild-plugin-glsl/issues"
+  },
+  "homepage": "https://github.com/undesigned-studio/esbuild-plugin-glsl#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "esbuild": "^0.17.0",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "esbuild": "0.x.x"
+  },
+  "dependencies": {
+    "glslify": "^7.1.1",
+    "tslib": "^2.4.1"
+  }
+}
